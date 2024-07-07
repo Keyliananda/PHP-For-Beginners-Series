@@ -1,6 +1,5 @@
 <?php
 
-Bullshit
 class Database
 {
     public $connection;

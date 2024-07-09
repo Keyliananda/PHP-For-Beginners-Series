@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c8b94577-47cd-4dd3-8a04-a75dfa2f536c" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/notes/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/notes/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/notes/show.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/notes/show.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="d5e728e782f8d33e69976463a6e8c78dc9d4983d" />
+        <entry key="$PROJECT_DIR$" value="EP31" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,13 +52,14 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;EP31&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;EP31s&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/kilianderbook4/Documents/workbook/PHP-For-Beginners-Series&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -84,7 +87,7 @@
       <workItem from="1720535995265" duration="377000" />
       <workItem from="1720536374728" duration="11026000" />
       <workItem from="1720551522428" duration="246000" />
-      <workItem from="1720551808480" duration="3315000" />
+      <workItem from="1720551808480" duration="5610000" />
     </task>
     <servers />
   </component>

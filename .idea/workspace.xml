@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8b94577-47cd-4dd3-8a04-a75dfa2f536c" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/Core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/notes/show.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/notes/show.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1720535995265" duration="377000" />
       <workItem from="1720536374728" duration="11026000" />
       <workItem from="1720551522428" duration="246000" />
-      <workItem from="1720551808480" duration="2689000" />
+      <workItem from="1720551808480" duration="3315000" />
     </task>
     <servers />
   </component>
@@ -103,7 +102,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="EP31" />
                       </list>
                     </value>
                   </entry>

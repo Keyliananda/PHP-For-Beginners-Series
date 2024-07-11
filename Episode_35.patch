@@ -1,0 +1,202 @@
+Subject: [PATCH] Episode 35
+---
+Index: Core/App.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Core/App.php b/Core/App.php
+new file mode 100644
+--- /dev/null	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
++++ b/Core/App.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -0,0 +1,28 @@
++<?php
++
++namespace Core;
++
++class App
++{
++    protected static $container;
++
++    public static function setContainer($container)
++    {
++        static::$container = $container;
++    }
++
++    public static function container()
++    {
++        return static::$container;
++    }
++
++    public static function bind($key, $resolver)
++    {
++        static::container()->bind($key, $resolver);
++    }
++
++    public static function resolve($key)
++    {
++        return static::container()->resolve($key);
++    }
++}
+Index: Core/Container.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Core/Container.php b/Core/Container.php
+new file mode 100644
+--- /dev/null	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
++++ b/Core/Container.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -0,0 +1,26 @@
++<?php
++
++namespace Core;
++
++use Exception;
++
++class Container
++{
++    protected $bindings = [];
++
++    public function bind($key, $resolver)
++    {
++        $this->bindings[$key] = $resolver;
++    }
++
++    public function resolve($key)
++    {
++        if (!array_key_exists($key, $this->bindings)) {
++            throw new Exception("No matching binding found for {$key}");
++        }
++
++        $resolver = $this->bindings[$key];
++
++        return call_user_func($resolver);
++    }
++}
+\ No newline at end of file
+Index: bootstrap.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bootstrap.php b/bootstrap.php
+new file mode 100644
+--- /dev/null	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
++++ b/bootstrap.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -0,0 +1,15 @@
++<?php
++
++use Core\App;
++use Core\Container;
++use Core\Database;
++
++$container = new Container();
++
++$container->bind('Core\Database', function () {
++    $config = require base_path('config.php');
++
++    return new Database($config['database']);
++});
++
++App::setContainer($container);
+Index: controllers/notes/destroy.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/notes/destroy.php b/controllers/notes/destroy.php
+--- a/controllers/notes/destroy.php	(revision 2fbb53282da03bc6038b088666aadcce9a0519eb)
++++ b/controllers/notes/destroy.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -1,9 +1,9 @@
+ <?php
+ 
++use Core\App;
+ use Core\Database;
+ 
+-$config = require base_path('config.php');
+-$db = new Database($config['database']);
++$db = App::resolve(Database::class);
+ 
+ $currentUserId = 1;
+ 
+Index: controllers/notes/index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/notes/index.php b/controllers/notes/index.php
+--- a/controllers/notes/index.php	(revision 2fbb53282da03bc6038b088666aadcce9a0519eb)
++++ b/controllers/notes/index.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -1,10 +1,9 @@
+ <?php
+ 
++use Core\App;
+ use Core\Database;
+ 
+-$config = require base_path('config.php');
+-$db = new Database($config['database']);
+-
++$db = App::resolve(Database::class);
+ $notes = $db->query('select * from notes where user_id = 1')->get();
+ 
+ view("notes/index.view.php", [
+Index: controllers/notes/show.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/notes/show.php b/controllers/notes/show.php
+--- a/controllers/notes/show.php	(revision 2fbb53282da03bc6038b088666aadcce9a0519eb)
++++ b/controllers/notes/show.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -1,9 +1,9 @@
+ <?php
+ 
++use Core\App;
+ use Core\Database;
+ 
+-$config = require base_path('config.php');
+-$db = new Database($config['database']);
++$db = App::resolve(Database::class);
+ 
+ $currentUserId = 1;
+ 
+Index: controllers/notes/store.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/notes/store.php b/controllers/notes/store.php
+--- a/controllers/notes/store.php	(revision 2fbb53282da03bc6038b088666aadcce9a0519eb)
++++ b/controllers/notes/store.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -1,11 +1,10 @@
+ <?php
+ 
++use Core\App;
+ use Core\Validator;
+ use Core\Database;
+ 
+-$config = require base_path('config.php');
+-$db = new Database($config['database']);
+-
++$db = App::resolve(Database::class);
+ $errors = [];
+ 
+ if (! Validator::string($_POST['body'], 1, 1000)) {
+Index: public/index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/index.php b/public/index.php
+--- a/public/index.php	(revision 2fbb53282da03bc6038b088666aadcce9a0519eb)
++++ b/public/index.php	(revision f22a3774ac0bd4e20f5dd5081366eceb423d3844)
+@@ -10,6 +10,8 @@
+     require base_path("{$class}.php");
+ });
+ 
++require base_path('bootstrap.php');
++
+ $router = new \Core\Router();
+ $routes = require base_path('routes.php');
+ 

@@ -1,0 +1,23 @@
+Index: public/index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n\nconst BASE_PATH = __DIR__.'/../';\n\nrequire BASE_PATH.'Core/functions.php';\n\nspl_autoload_register(function ($class) {\n    // Core\\Database\n    $class = str_replace('\\\\', DIRECTORY_SEPARATOR, $class);\n\n    require base_path(\"{$class}.php\");\n});\n\n\n$router = new \\Core\\Router();\n\n$routes = require base_path('routes.php');\n\n$uri = parse_url($_SERVER['REQUEST_URI'])['path'];\n$method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];\n\n$router->route($uri, $method);\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/index.php b/public/index.php
+--- a/public/index.php	
++++ b/public/index.php	
+@@ -13,10 +13,9 @@
+ 
+ 
+ $router = new \Core\Router();
+-
+ $routes = require base_path('routes.php');
+ 
+ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
+ 
+-$router->route($uri, $method);
++$router->route($uri, $method);
+\ No newline at end of file

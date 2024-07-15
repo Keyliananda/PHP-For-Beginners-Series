@@ -37,9 +37,7 @@ if ($user) {
         'password' => password_hash($password, PASSWORD_DEFAULT) // NEVER store database passwords in clear text. We'll fix this in the login form episode. :)
     ]);
 
-    $_SESSION['user'] = [
-        'email' => $email
-    ];
+    login($user);
 
     header('location: /');
     exit();

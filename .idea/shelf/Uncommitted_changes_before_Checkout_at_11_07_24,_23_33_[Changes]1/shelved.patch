@@ -1,0 +1,21 @@
+Index: routes.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n\n$router->get('/', 'controllers/index.php');\n$router->get('/about', 'controllers/about.php');\n$router->get('/contact', 'controllers/contact.php');\n\n$router->get('/notes', 'controllers/notes/index.php');\n$router->get('/note', 'controllers/notes/show.php');\n$router->delete('/note', 'controllers/notes/destroy.php');\n\n$router->get('/note/edit', 'controllers/notes/edit.php');\n$router->patch('/note', 'controllers/notes/update.php');\n\n\n$router->get('/notes/create', 'controllers/notes/create.php');\n$router->post('/notes', 'controllers/notes/store.php');\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/routes.php b/routes.php
+--- a/routes.php	
++++ b/routes.php	
+@@ -11,7 +11,8 @@
+ $router->get('/note/edit', 'controllers/notes/edit.php');
+ $router->patch('/note', 'controllers/notes/update.php');
+ 
+-
+ $router->get('/notes/create', 'controllers/notes/create.php');
+ $router->post('/notes', 'controllers/notes/store.php');
+ 
++$router->get('/register', 'controllers/registration/create.php');
++$router->post('/register', 'controllers/registration/store.php');
+\ No newline at end of file

@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f9e00b-0586-4ca6-9243-0a562a5f0709" name="Changes" comment="Lesson 39 - passt :-)&#10;&#10;Test mit manu" />
+    <list default="true" id="27f9e00b-0586-4ca6-9243-0a562a5f0709" name="Changes" comment="Lesson 39 - passt :-)&#10;&#10;Test mit manu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Authenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Http/Forms/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Http/Forms/LoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Http/controllers/session/destroy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Http/controllers/session/destroy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Http/controllers/session/store.php" beforeDir="false" afterPath="$PROJECT_DIR$/Http/controllers/session/store.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,16 +54,21 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "66c4d61f",
+    "git-widget-placeholder": "EP-43-failEnde",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.import",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Http" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,7 +91,9 @@
       <option name="presentableId" value="Default" />
       <updated>1720768033993</updated>
       <workItem from="1720768035370" duration="6172000" />
-      <workItem from="1720876253790" duration="13414000" />
+      <workItem from="1720876253790" duration="13527000" />
+      <workItem from="1721046705117" duration="897000" />
+      <workItem from="1721064388982" duration="8906000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 40 - passt :-)">
       <option name="closed" value="true" />
@@ -101,6 +117,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson 37 - done (Jeff hat noch mehr nicht funktionierendes eingebaut)" />
     <MESSAGE value="Lesson 40 - passt :-)" />
@@ -112,7 +139,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/controllers/notes/store.php</url>
+          <url>file://$PROJECT_DIR$/Http/controllers/notes/store.php</url>
           <line>2</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

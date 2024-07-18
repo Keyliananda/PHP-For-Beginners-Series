@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27f9e00b-0586-4ca6-9243-0a562a5f0709" name="Changes" comment="Lesson 39 - passt :-)&#10;&#10;Test mit manu">
-      <change afterPath="$PROJECT_DIR$/Core/ValidationException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Http/Forms/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Http/Forms/LoginForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Http/controllers/session/store.php" beforeDir="false" afterPath="$PROJECT_DIR$/Http/controllers/session/store.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/session/create.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/session/create.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +51,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "EP-44-Ende",
+    "git-widget-placeholder": "EP-46-F",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,7 +95,7 @@
       <workItem from="1721228888135" duration="1943000" />
       <workItem from="1721286816837" duration="973000" />
       <workItem from="1721287869790" duration="805000" />
-      <workItem from="1721288986907" duration="8193000" />
+      <workItem from="1721288986907" duration="8720000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 40 - passt :-)">
       <option name="closed" value="true" />

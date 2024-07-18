@@ -3,6 +3,7 @@
 use Core\App;
 use Core\Database;
 use Core\Validator;
+use Core\functions;
 
 $db = App::resolve(Database::class);
 

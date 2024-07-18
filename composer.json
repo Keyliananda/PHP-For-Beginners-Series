@@ -1,0 +1,26 @@
+{
+    "name": "kilianderbook4/php-for-beginners-series",
+    "authors": [
+        {
+            "name": "Keyliananda",
+            "email": "info@piano-volz.de"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^11.16"
+    },
+        "autoload": {
+            "psr-4": {
+                "Core\\" : "Core/",
+                "Httpt\\" : "Http/"
+            }
+        },
+    "require-dev": {
+        "pestphp/pest": "^2.34"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
